@@ -126,6 +126,12 @@ export const siteSettings = defineType({
       initialValue: {en: 'Photography', de: 'Fotografie'},
     }),
     defineField({
+      name: 'aboutTitle',
+      title: 'About Page Title',
+      type: 'localeString',
+      initialValue: {en: 'About', de: 'Über'},
+    }),
+    defineField({
       name: 'newsletterTitle',
       title: 'Newsletter Title',
       type: 'localeString',
@@ -136,6 +142,30 @@ export const siteSettings = defineType({
       title: 'Newsletter Submit Label',
       type: 'localeString',
       initialValue: {en: 'Subscribe', de: 'Abonnieren'},
+    }),
+    defineField({
+      name: 'heroRecently',
+      title: 'Recently Page Hero Image',
+      type: 'image',
+      options: {hotspot: true},
+    }),
+    defineField({
+      name: 'heroPaintings',
+      title: 'Paintings Page Hero Image',
+      type: 'image',
+      options: {hotspot: true},
+    }),
+    defineField({
+      name: 'heroDrawings',
+      title: 'Drawings Page Hero Image',
+      type: 'image',
+      options: {hotspot: true},
+    }),
+    defineField({
+      name: 'heroPhotography',
+      title: 'Photography Page Hero Image',
+      type: 'image',
+      options: {hotspot: true},
     }),
   ],
   preview: {
