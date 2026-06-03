@@ -8,10 +8,26 @@ export const recentlyFeed = defineType({
   fields: [
     defineField({
       name: 'title',
-      title: 'Internal Title (not displayed)',
-      type: 'string',
-      description: 'Used only for internal CMS organization',
+      title: 'Title',
+      type: 'localeString',
+      description: 'The public title of this post.',
       validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title.en',
+        maxLength: 96,
+      },
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'localeString',
+      description: 'A short summary of the post for the blog feed.',
     }),
     defineField({
       name: 'publishedAt',
@@ -140,7 +156,7 @@ export const recentlyFeed = defineType({
   ],
   preview: {
     select: {
-      title: 'title',
+      title: 'title.en',
       contentType: 'contentType',
       date: 'publishedAt',
       media: 'image',
