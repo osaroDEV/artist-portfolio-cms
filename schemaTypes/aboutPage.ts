@@ -38,10 +38,10 @@ export const aboutPage = defineType({
               options: {
                 list: [
                   {title: 'Education', value: 'education'},
-                  {title: 'Residency (Projects)', value: 'residency'},
-                  {title: 'Publication (Bibliography)', value: 'publication'},
+                  {title: 'Residency (Projects & Scholarships)', value: 'residency'},
                   {title: 'Solo Exhibition', value: 'solo-exhibition'},
                   {title: 'Group Exhibition', value: 'group-exhibition'},
+                  {title: 'Works in Public Collections', value: 'public-collection'},
                 ]
               }
             },
@@ -79,21 +79,6 @@ export const aboutPage = defineType({
         }
       ]
     }),
-    defineField({
-      name: 'networkLinks',
-      title: 'Network Links',
-      type: 'array',
-      of: [
-        {
-          type: 'object',
-          name: 'networkLink',
-          fields: [
-            {name: 'name', type: 'string', title: 'Name'},
-            {name: 'url', type: 'url', title: 'URL'},
-          ]
-        }
-      ]
-    })
   ],
   preview: {
     select: {
