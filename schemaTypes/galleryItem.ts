@@ -78,19 +78,6 @@ export const galleryItem = defineType({
       type: 'localePortableText',
     }),
     defineField({
-      name: 'series',
-      title: 'Series (Text)',
-      type: 'localeString',
-      description: 'Legacy text series field (e.g. "SERIES 2011-2016 | PIGMENT INK")',
-    }),
-    defineField({
-      name: 'seriesRef',
-      title: 'Series Selection',
-      type: 'reference',
-      to: [{type: 'series'}],
-      description: 'Link this item to a structured series to group it.',
-    }),
-    defineField({
       name: 'featured',
       title: 'Featured on Homepage',
       type: 'boolean',

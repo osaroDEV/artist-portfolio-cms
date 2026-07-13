@@ -3,7 +3,6 @@ import {galleryItem} from './galleryItem'
 import {recentlyFeed} from './recentlyFeed'
 import {siteSettings} from './siteSettings'
 import {aboutPage} from './aboutPage'
-import {series} from './series'
 
 export const schemaTypes = [
   // Locale helper types (must come first)
@@ -15,5 +14,4 @@ export const schemaTypes = [
   recentlyFeed,
   siteSettings,
   aboutPage,
-  series,
 ]
